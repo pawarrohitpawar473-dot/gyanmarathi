@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ज्ञानमराठी - मराठी बातम्या, शिक्षण, नोकरी, शेती, टेक्नॉलॉजी, सरकारी योजना आणि मनोरंजन.">
+<title>ज्ञानमराठी | मराठी माहितीचे विश्व</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="top">
+    <div class="logo">ज्ञान<span>मराठी</span></div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+  <nav id="nav">
+    <a href="#home">मुख्यपृष्ठ</a>
+    <a href="#news">बातम्या</a>
+    <a href="#education">शिक्षण</a>
+    <a href="#jobs">नोकरी</a>
+    <a href="#agri">शेती</a>
+    <a href="#tech">टेक्नॉलॉजी</a>
+    <a href="#schemes">सरकारी योजना</a>
+    <a href="#business">व्यवसाय</a>
+    <a href="#entertainment">मनोरंजन</a>
+    <a href="#marriage">लग्न जुळवणी</a>
+  </nav>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div>
+      <p class="tag">आपल्या ज्ञानासाठी एकच ठिकाण</p>
+      <h1>ज्ञानमराठी</h1>
+      <p>मराठीत ताज्या माहितीपासून शिक्षण, नोकरी, शेती, टेक्नॉलॉजी आणि सरकारी योजनांपर्यंत उपयुक्त माहिती.</p>
+      <a class="btn" href="#articles">लेख वाचा</a>
+    </div>
+  </section>
+
+  <section class="section" id="articles">
+    <div class="section-head">
+      <h2>ताजे लेख</h2>
+      <input id="search" type="search" placeholder="लेख शोधा..." oninput="searchArticles()">
+    </div>
+    <div class="grid" id="articleGrid">
+      <article class="card" data-title="सरकारी योजना">
+        <div class="emoji">🏛️</div><div class="content"><small>सरकारी योजना</small><h3>सरकारी योजनांची माहिती ऑनलाइन कशी तपासावी?</h3><p>अधिकृत वेबसाइटवर माहिती तपासताना कोणत्या गोष्टी लक्षात ठेवाव्यात.</p><a href="#">संपूर्ण लेख →</a></div>
+      </article>
+      <article class="card" data-title="टेक्नॉलॉजी">
+        <div class="emoji">📱</div><div class="content"><small>टेक्नॉलॉजी</small><h3>मोबाईलचा स्मार्ट वापर करण्यासाठी ७ टिप्स</h3><p>दैनंदिन कामात स्मार्टफोनचा सुरक्षित आणि उपयोगी वापर कसा करावा.</p><a href="#">संपूर्ण लेख →</a></div>
+      </article>
+      <article class="card" data-title="शिक्षण">
+        <div class="emoji">🎓</div><div class="content"><small>शिक्षण</small><h3>अभ्यासाचे वेळापत्रक कसे तयार करावे?</h3><p>परीक्षेच्या तयारीसाठी सोपे आणि व्यवहार्य नियोजन.</p><a href="#">संपूर्ण लेख →</a></div>
+      </article>
+      <article class="card" data-title="शेती">
+        <div class="emoji">🌾</div><div class="content"><small>शेती</small><h3>शेतीतील आधुनिक तंत्रज्ञानाची ओळख</h3><p>शेतकऱ्यांसाठी उपयोगी ठरू शकणाऱ्या डिजिटल साधनांची माहिती.</p><a href="#">संपूर्ण लेख →</a></div>
+      </article>
+      <article class="card" data-title="नोकरी">
+        <div class="emoji">💼</div><div class="content"><small>नोकरी</small><h3>नोकरीसाठी CV तयार करताना काय लिहावे?</h3><p>सोप्या भाषेत प्रभावी CV तयार करण्याच्या मूलभूत टिप्स.</p><a href="#">संपूर्ण लेख →</a></div>
+      </article>
+      <article class="card" data-title="व्यवसाय">
+        <div class="emoji">💰</div><div class="content"><small>व्यवसाय</small><h3>छोटा व्यवसाय सुरू करण्यापूर्वी ५ गोष्टी</h3><p>व्यवसायाची कल्पना, ग्राहक आणि खर्च यांचे प्राथमिक नियोजन.</p><a href="#">संपूर्ण लेख →</a></div>
+      </article>
+    </div>
+  </section>
+
+
+  <section class="marriage" id="marriage">
+    <div class="section-head">
+      <div>
+        <h2>💍 लग्न जुळवणी</h2>
+        <p>तुमची माहिती देऊन योग्य स्थळ शोधण्याची सुरुवात करा.</p>
+      </div>
+    </div>
+    <div class="marriage-grid">
+      <div class="profile-form card">
+        <div class="content">
+          <h3>तुमचा विवाह प्रोफाइल</h3>
+          <form id="marriageForm" onsubmit="saveMarriageProfile(event)">
+            <label>नाव<input id="mName" required placeholder="पूर्ण नाव"></label>
+            <label>वय<input id="mAge" type="number" min="18" max="100" required placeholder="वय"></label>
+            <label>लिंग<select id="mGender" required><option value="">निवडा</option><option>वर</option><option>वधू</option></select></label>
+            <label>शहर / जिल्हा<input id="mLocation" required placeholder="उदा. पुणे"></label>
+            <label>मोबाईल नंबर<input id="mPhone" type="tel" required placeholder="मोबाईल नंबर"></label>
+            <label>फोटो निवडा<input id="profilePhoto" type="file" accept="image/*" onchange="previewPhoto(event)"></label>
+            <div id="photoPreview" class="photo-preview">फोटोचा preview येथे दिसेल</div>
+            <button class="primary-btn" type="submit">प्रोफाइल तयार करा</button>
+          </form>
+          <p class="form-note">टीप: सध्या हा demo form आहे. माहिती खरोखर online save करण्यासाठी database/backend जोडणे आवश्यक आहे.</p>
+        </div>
+      </div>
+      <div class="card marriage-info">
+        <div class="emoji">💑</div>
+        <div class="content">
+          <h3>सुरक्षित लग्न जुळवणी</h3>
+          <ul>
+            <li>प्रोफाइलमध्ये फक्त आवश्यक माहिती द्या.</li>
+            <li>वैयक्तिक कागदपत्रे किंवा OTP कधीही सार्वजनिक करू नका.</li>
+            <li>समोरच्या व्यक्तीची माहिती प्रत्यक्ष पडताळून पहा.</li>
+            <li>फोटो सार्वजनिक करण्यापूर्वी तुमची परवानगी आणि privacy policy ठेवा.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories">
+    <h2>विभाग</h2>
+    <div class="cat-grid">
+      <a href="#news">📰 बातम्या</a><a href="#education">🎓 शिक्षण</a><a href="#jobs">💼 नोकरी</a>
+      <a href="#agri">🌾 शेती</a><a href="#tech">📱 टेक्नॉलॉजी</a><a href="#schemes">🏛️ सरकारी योजना</a>
+      <a href="#business">💰 व्यवसाय</a><a href="#entertainment">🎬 मनोरंजन</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>ज्ञानमराठी बद्दल</h2>
+    <p>ज्ञानमराठी हे विविध विषयांवरील मराठी माहिती एका ठिकाणी उपलब्ध करून देण्यासाठी तयार केलेले ब्लॉग व्यासपीठ आहे.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="logo">ज्ञान<span>मराठी</span></div>
+  <p>© 2026 ज्ञानमराठी. सर्व हक्क राखीव.</p>
+  <div><a href="#">Privacy Policy</a> · <a href="#">Contact</a> · <a href="#">About</a></div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('show')}
+function previewPhoto(event){
+  const file=event.target.files[0];
+  const box=document.getElementById('photoPreview');
+  if(!file){box.innerHTML='फोटोचा preview येथे दिसेल';return;}
+  const reader=new FileReader();
+  reader.onload=e=>{box.innerHTML='<img src="'+e.target.result+'" alt="Profile photo preview">';};
+  reader.readAsDataURL(file);
+}
+function saveMarriageProfile(event){
+  event.preventDefault();
+  alert('तुमचा प्रोफाइल demo स्वरूपात तयार झाला आहे. Online profiles साठवण्यासाठी database जोडणे आवश्यक आहे.');
+}
+function searchArticles(){
+  const q=document.getElementById('search').value.toLowerCase();
+  document.querySelectorAll('.card').forEach(c=>{
+    c.style.display=c.dataset.title.toLowerCase().includes(q)||c.innerText.toLowerCase().includes(q)?'block':'none';
+  });
+}
+</script>
+</body>
+</html>
